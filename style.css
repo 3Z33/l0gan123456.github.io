@@ -1,5 +1,8 @@
-tr, td, table {
-    border:1px double black;
+tr, td, th, table {
+    border:1px solid black; 
+/* border-collapse: collapse; collapse sert à "coller" les bordures des cellules entre elles */
+    border-spacing: 0px;
+    border-radius: 15px
 }
 
 tr td {
@@ -10,3 +13,23 @@ tr td {
 tr td[colspan="2"] {  /* tous les td enfants de tr qui ont comme paramètres colspan="2" */
     text-align:center;        
 }
+
+
+tr:nth-child(3) {   /* le nième tr de tr ( ici 3 ème ) ( even = pair / odd = impair )  on appelle cela une sous classe */
+    background-color:brown
+}
+
+.bonjour tr td{  /* quand on commence par un point . on désigne une classe, ici on spécifie les tr et td ayant laclasse bonjour, tous les */
+    background-color: aquamarine;   /* éléments ayant cette classe seront affectée */
+}
+
+
+/* table {
+    border-radius: 15%;   border-radius arrondis les bords des tableaux 
+}    */
+
+#animal:hover {
+    cursor:pointer  /* over fait en sorte que quand on passe la souris sur animal le curseur change d'aspect */
+}
+ 
+

@@ -42,6 +42,8 @@ setInterval(horloge, 1000)
 
 // Je voudrais avoir un compte à rebours qui commence à 50 et qui finit à 0 et qui descend toutes les 2 secondes
 
+/*
+
 var compte = 50
 function comptage() {
     if (compte > 0 ) {
@@ -52,6 +54,7 @@ function comptage() {
 
 setInterval(comptage, 2000)
 
+*/
 
 //git add .
 
@@ -61,3 +64,57 @@ setInterval(comptage, 2000)
 
 
 // commande pour tout faire en une fois : git add . && git commit -m "Maj" && git push -u origin main ("Maj" ou un nom au choix)
+
+//--------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+//Array = Tableau
+// c'est un type de variable qui est elle même un tableau
+
+var tab = [] // on fait une variable de type array vide
+
+var tab = [10, "bonjour", 7.5, null] // on met des éléments dans le tableau, la variable tab contient maintenant 4 valeurs, elles restent dans l'ordre dans laquelle
+                                     //ont les a déclarés
+
+console.log(tab[1])  // on compte à partir de l'index 0
+console.log(tab[3]) 
+
+
+
+
+// Je voudrais un tableau qui se nomme Chmilblik qui comporte 5 valeurs de type string et 5 valeurs de type int ou float
+
+var Chmilblik = ["Bonjour", "Poisson", "Chien", "Chat", "Ballon", 1, 2, 2.5, 3, 4]
+
+console.log(Chmilblik) //on peut afficher les élémens du tableau dans la console du navigateur
+console.log(Chmilblik.lenght) // .lenght permet de savoir la longueur du tableau
+
+
+// getElementById sélectionne un élément qui à l'id défini sur animal dans ce cas
+// document.getElementById("animal").innerHTML = "Autruche"
+
+
+// addEventListener créé une écoute d'évènement, l'élément "animal" attent l'évènement click-souris pour se changer en "Autruche"
+// document.getElementById("animal").addEventListener('click', function() {
+    //document.getElementById('animal').innerHTML = "Autruche"
+// })
+
+//---------------------------------------------------------------------------------
+
+// getElementById séléctionne un élément qui à l'id défini sur animal dans ce cas addEventListener créé une écoute d'évènement
+// exemple avec changement à chaque clicks
+
+let animal = "Autruche"
+let temp = ""
+
+document.getElementById("animal").addEventListener('click', function() {// je regarde le texte qui ce trouve dan cet élément
+    temp = document.getElementById('animal').innerHTML // Je modifie le texte qui se trouve dns cet élément par la valeur de la variable animal
+    document.getElementById('animal').innerHTML = animal
+    animal = temp
+})    
+
+
+
+
+
+

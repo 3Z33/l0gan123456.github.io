@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Cours HTML</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    
     <style> 
         tr, th, td {
-            border:1px solid black;   
+             border:1px solid black;   
         }
     </style>
 </head>
@@ -28,7 +28,7 @@
 
     <p>Bonjour je suis de bonne humeur</p>
 
-    <table>
+    <table class="bonjour">
         <tr>  <!-- le tr sert a ajouter des lignes au tableau-->
             <th>Lieu</th> <!-- avec th le texte sera en gras alor qu'avec td il sera normal-->
             <td>Auboué</td>
@@ -158,6 +158,36 @@
             <td>Social</td>
         </tr>
     </table>
+
+    <p id="animal">Test</p> <!-- on attribut à Test la classe #animal-->
+
+    <form action="">
+        <label for="name">Nom : </label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom" id="prenom">
+        <br><br>
+        <label for="age">Age : </label>
+        <input type="number" name="age" id="age">
+        <br><br>
+        <input type="radio" name="sex" id="sex">
+        <label for="masculin">Homme</label>
+        <br>
+        <input type="radio" name="sex" id="féminin">
+        <label for="féminin">Femme</label>
+        <br>
+        <input type="radio" name="sex" id="autruche">
+        <label for="autruche">Autruche</label>
+        <br><br>
+        <input type="checkbox" name="me" id="me">
+        <label for="me">Je suis moi ?</label>
+        <br><br>
+        <input type="submit" value="envoyer">
+    </form>
+
+    <script src="./script.js"></script> <!-- on met le script en bas de page pour par avoir d'erreur de chargement ( script.Js qui envoie des instructions avant
+                                             que la ahe HTML soit entièrement chargée )-->
 
 
     
