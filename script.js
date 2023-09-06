@@ -58,3 +58,6 @@ setInterval(comptage, 2000)
 //git commit -m 'nomdefichier'
 
 //git push -u origin main
+
+
+// commande pour tout faire en une fois : git add . && git commit -m "Maj" && git push -u origin main ("Maj" ou un nom au choix)
