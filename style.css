@@ -1,0 +1,12 @@
+tr, td, table {
+    border:1px double black;
+}
+
+tr td {
+    text-align:center;        /*je prend les td qui sont enfants de tr ( sans virgules ) et je les centre */
+
+}
+
+tr td[colspan="2"] {  /* tous les td enfants de tr qui ont comme paramètres colspan="2" */
+    text-align:center;        
+}

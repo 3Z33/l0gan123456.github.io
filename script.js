@@ -51,3 +51,10 @@ function comptage() {
 }
 
 setInterval(comptage, 2000)
+
+
+//git add .
+
+//git commit -m 'nomdefichier'
+
+//git push -u origin main
