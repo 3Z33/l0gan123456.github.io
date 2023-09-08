@@ -172,13 +172,60 @@
     } else {
         echo "<br>tu es basique donc tu es nul.";
     }
-    
-        
-
-    
-
 
      ?>
+
+     <form action="" method="post">
+        <h2>Register</h2>
+        <label for="text">First name: </label>
+        <br>
+        <input type="text" name="firstname" id="firstname">
+    <br><br>
+        <label for="text">Last name: </label>
+        <br>
+        <input type="text" name="lastname" id="lastname">
+    <br><br>
+        <label for="email">Email: </label>
+        <br>
+        <input type="email" name="email" id="email">
+    <br><br>
+        <label for="password">Password: </label>
+        <br>
+        <input type="password" name="pass" id="pass">
+    <br><br>
+        <label for="password">Confirm password: </label>
+        <br>
+        <input type="password" name="cpass" id="cpass">
+        <br>
+    <label for="text">Gender: </label>
+    <br>
+    <input type="radio" name="button" id="male" value="male">
+    <label for="button1">Male</label>
+
+    <input type="radio" name="button" id="female" value="male">
+    <label for="button2">Female</label>
+
+    <input type="radio" name="button" id="other" value="male">
+    <label for="button3">Other</label>
+    <br>
+    <input type="submit" value="submit">
+
+     </form>
+
     
+     <?php
+        if (isset($_POST) && !empty($_POST)) {  
+            echo '<pre>'; var_dump($_POST); echo '</pre>';
+            echo $_POST['firstname'];
+            // sha1 Hash le mot c'est à dire le complexifie et le rend ilisible
+            // sha1 / md5
+            echo sha1($_POST['password']) . "<br>";
+            echo md5($_POST['password']);
+        }
+
+        // Si method post est rentré dans le formulaire il faut utiliser $_POST , sinon si la methode get est rentrée dans le formulaire il faut utiliser $_GET
+        // La fonction isset sert à regarder si la variable qui lui est donnée est bien définie, dans ce cas ci elle regarde si la variable $_POST est définie
+
+        ?>
 </body>
 </html>
