@@ -31,5 +31,59 @@ tr:nth-child(3) {   /* le nième tr de tr ( ici 3 ème ) ( even = pair / odd = i
 #animal:hover {
     cursor:pointer  /* over fait en sorte que quand on passe la souris sur animal le curseur change d'aspect */
 }
- 
+
+input[type="submit"], input[type="reset"] {   /* modification de l'aspect des boutons de type submit et reset */
+    font-size : 1.7em;
+    border-radius: 25%;
+} 
+
+/* si on veut faire des exceptions les paramètres d'aspect sur certains boutons, on faic ceci : */
+
+/* input[type="submit"][value="submit"], input[type="reset"] {    et dans le html on évite de leur donner comme value "submit" pour ne pas qu'ils soient inclus 
+    font-size : 1.7em;
+    border-radius: 25%;
+}   */
+
+
+#message {   /* on bloque le resizing du champ de texte  [value=]*/
+    resize:none
+}
+
+
+@keyframes animationimg {    /* on créé une animation qu'on appelle animationimg, au début elle va transformer scaleX en -1 puis elle va transformer scaleX en 1 et à la fin */
+    0% {                   /*  elle va transformer scaleX en -1 */
+        transform: scaleX(-1);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(-1);
+    }
+}
+
+body {
+    /* background-image: url(https://docs.gimp.org/2.6/fr/images/tutorials/quickie-jpeg-example.jpg); */
+    background-size: 80px;
+}
+
+img {                            
+    border: 3px dashed gray;      /* ajout et personnalisation de bordures */
+    border-radius: 25px;           /* arrondis de bordures */
+    opacity: 0.8;                  /* opacité de l'image à 80% */
+    height: 50%; 
+    max-width: 100%;  /* on rend l'image recursive/responsive */
+    filter: blur(2px);  /* flouttage de l'image */
+    filter: contrast(4);   /* gestion du contraste de l'image */
+    animation: animationimg 2s ease-in infinite; /* je dit que l'élément img joue l'animationimg qu'elle doit durée 1,5s en fonctionnement en ease-in et elle ce joue */
+                                               /*  un nombre infinie de fois */
+}
+
+img:hover {
+    transform: scaleY(-1);  /* au passage de la souris l'image se retourne sur l'axe Y ( fonctionne aussi avec X ) */
+}
+
+
+
+
 

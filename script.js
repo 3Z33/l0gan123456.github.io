@@ -15,7 +15,7 @@ var Ventilo = null
 
 let Phrase = "J'aime l' " + Autruche + " mais pas les " + Perche
 // le résultat sera  :  J'aime l'Animal mais pas les Poisson
-// concaténné les chaines de caractères et les variables
+// concaténner les chaines de caractères et les variables
 
 var calcul = heure + NombreStagiaire
 // cela revient à faire  :  14.31 + 10  ( le + va additionner puisque ce sont des int )
@@ -107,14 +107,94 @@ console.log(Chmilblik.lenght) // .lenght permet de savoir la longueur du tableau
 let animal = "Autruche"
 let temp = ""
 
-document.getElementById("animal").addEventListener('click', function() {// je regarde le texte qui ce trouve dan cet élément
-    temp = document.getElementById('animal').innerHTML // Je modifie le texte qui se trouve dns cet élément par la valeur de la variable animal
+document.getElementById("animal").addEventListener('click', function() { // je regarde le texte qui ce trouve dan cet élément
+    temp = document.getElementById('animal').innerHTML // Je modifie le texte qui se trouve dans cet élément par la valeur de la variable animal
     document.getElementById('animal').innerHTML = animal
     animal = temp
-})    
+})
+
+
+//--------------------------------------------------------------------------
 
 
 
 
 
+while (false) {} // tant que ce qu'il se trouve dans les () est vrai elle tourne
+
+for (var i = 0; i < 10 ; i++) {  // je défini une variable i qui incrémente de 1 à chaques tours jusqu'à ce que i soit supérieur à 10
+
+}
+
+// La boucle tourne jusqu'à la taille du tableau
+for(var i = 0 ; i < Chmilblik.length; i++) {
+    console.log(Chmilblik[i])
+}
+
+do {
+
+} while (false); // Elle s'écécute une première fois, puis elle vérifie si la condition est vrai ou fausse pour s'exécuter de nouveau
+
+
+
+
+for(var i = 0 ; i < Chmilblik.length; i++) {
+    console.log(Chmilblik[i])
+    if (1 == 3) {
+        break  // break permet de sortir de la boucle
+    }
+}
+
+for (index in Chmilblik) {
+    console.log(index)
+}
+
+
+// Tableau associatif
+var tab_assoc = {"ami":"chien", "cafe":"cafeine"}
+
+for (index in tab_assoc) {
+    console.log(index)
+}
+console.log("index")
+
+//-------------------------------------------------------------
+
+for(var i = 10; i >= 0; i--) {
+    //console.log("il reste " + i + " lignes à écrire") // première façon de faire
+    //console.log("Il reste ", i, "lignes à écrire")  // deuxième façon de faire
+    //console.log(`Il reste ${i} lignes à écrire`)  // troisième façon de faire       // le ${} ne fonctionne que avec les ``
+    console.log(`Il reste ${i} lignes${i <= 1 ? '' : 's'} à écrire`)
+}
+
+//cela revient à faire :
+
+/*
+if (i <= 1) { // si vrai
+    console.log('')
+} else { // sinon faux
+    console.log('s')
+}
+
+*/
+
+
+// une fonction pour trouver tous les multiples de n nombres
+
+
+function diviseur(n) {
+    var i = 2;
+    var temp = '1';
+    while ( i <= n) {
+        if (n % i == 0) {
+            temp = temp + ',' + i;
+        }
+        i++;
+    }
+    return temp
+}
+
+for (let index = 1; index <= 100; index++) {
+    console.log(`Les diviseurs de ${index} sont: ${diviseur(index)}`)
+}
 

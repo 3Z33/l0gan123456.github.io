@@ -9,6 +9,8 @@
         tr, th, td {
              border:1px solid black;   
         }
+
+        
     </style>
 </head>
 <body>
@@ -185,6 +187,127 @@
         <br><br>
         <input type="submit" value="envoyer">
     </form>
+    <br><br>
+
+    <!----------------------------------------------------------------------------------------------------------------------->
+    <h2>HTML form</h2>
+
+    <form action="">
+        <label for="First name">First name :</label>
+        <input type="text" name="First name" id="First name">
+        <br><br>
+        <label for="Last name">Last name :</label>
+        <input type="text" name="Last name" id="Last name">
+        <br><br>
+        <label for="email">E-mail :</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <input type="radio" name="sex" id="sex">  <!--- pour ne pouvoir électionner qu'un seul bouton radio il faut des les boutons radio aient le même name=-->
+        <label for="Male">Male</label>
+        <br><br>
+        <input type="radio" name="sex" id="sex">
+        <label for="Female">Female</label>
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="submit" value="Reset">
+
+    </form>
+
+
+    <!------------------------------------------------------------------------------------------------------>
+
+    <!-- amélioration du formulaire -->
+
+    <p id="animal">Test</p> 
+
+    <form action="">
+        <fieldset>
+            <legend>Mon formulaire</legend>
+        <label for="name">Nom : </label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom" id="prenom">
+        <br><br>
+        <label for="age">Age : </label>
+        <input type="number" name="age" id="age">
+        <br><br>
+        <input type="radio" name="sex" id="sex">
+        <label for="masculin">Homme</label>
+        <br>
+        <input type="radio" name="sex" id="féminin">
+        <label for="féminin">Femme</label>
+        <br>
+        <input type="radio" name="sex" id="autruche" checked>
+        <label for="autruche">Autruche</label>
+        <br><br>
+        <input type="checkbox" name="me" id="me">
+        <label for="me">Je suis moi ?</label>
+        <br><br>
+        <textarea name="message" placeholder="je veux un message" id="message" cols="30" rows="10"></textarea>
+        <input type="submit" value="envoyer">          <!-- control F5 pour reset le cache de la page-->
+    </fieldset>
+    </form>
+<br><br>
+
+    <!-------------------------------------------------------------------------------------------------------------->
+    <form>
+    <fieldset>
+        <legend>Selection options list</legend>
+
+        
+        <label for="check">Checkbox :</label>
+        <input type="checkbox" name="check" id="check">
+        <br>
+        
+        <label for="button1">RadioButton1 :</label>
+            <input type="radio" name="button1" id="button1">
+        <br>
+        
+        <label for="button2">RadioButton2 :</label>
+        <input type="radio" name="button1" id="button2">
+    </fieldset>
+
+    <fieldset>
+        <legend>Input text</legend>
+        
+        <label for="LoginId">Login Id :</label>
+        <input type="text" name="LoginId" id="LoginId">
+        <br>
+        
+        <label for="Password">Password :</label>
+        <input type="password" name="Password" id="Password">
+    </fieldset>
+
+    <fieldset>
+        <legend>Employee Designation</legend>
+        <br><br>
+        <input type="checkbox" name="SoftwareEngineer" id="SoftwareEngineer">
+        <label for="SoftwareEngineer">Software Engineer</label>
+        <br><br>
+        <input type="checkbox" name="Data Analyst" id="Data Analyst">
+        <label for="Date Analyst">Data Analyst</label>
+        <br><br>
+        <input type="checkbox" name="WebDeveloper" id="WebDeveloper">
+        <label for="WebDeveloper">Web Developer</label>
+        <br><br>
+        <input type="checkbox" name="SeniorAnalyst" id="SeniorAnalyst">
+        <label for="SeniorAnalyst">Senior Analyst</label>
+        <br><br>
+    </fieldset>
+    <br>
+    <input type="submit" value="press">
+    <input type="reset" value="reset">
+</form>
+
+<br><br>
+    
+
+
+<img src="https://docs.gimp.org/2.6/fr/images/tutorials/quickie-jpeg-example.jpg" alt="Saturne" width="250px" height="150px"> <!-- si on met que width et la de height
+ l'image se dimensionnera toute seule ( ou on peut faire height="auto" )-->
+
+    
 
     <script src="./script.js"></script> <!-- on met le script en bas de page pour par avoir d'erreur de chargement ( script.Js qui envoie des instructions avant
                                              que la ahe HTML soit entièrement chargée )-->
