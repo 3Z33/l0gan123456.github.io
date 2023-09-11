@@ -1,3 +1,5 @@
+
+
 tr, td, th, table {
     border:1px solid black; 
 /* border-collapse: collapse; collapse sert à "coller" les bordures des cellules entre elles */
@@ -84,6 +86,40 @@ img:hover {
 }
 
 
+
+fieldset {
+    width: 10px;
+}
+
+.conteneur {
+    background-color: black;
+    height:200px;
+    width: 100%; /* Prend toute la largeur de  */
+    display: flex; /* L'affichage se met en mode flex */
+    justify-content: space-evenly; 
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rouge {
+    background-color: red;
+    width:10%;
+    height:100px;
+
+}
+
+.vert {
+    background-color: green;
+    width:10%;
+    height:100px;
+}
+
+.orange {
+    background-color: orange;
+    width:10%;
+    height:100px;
+}
 
 
 

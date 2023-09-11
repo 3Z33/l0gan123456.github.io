@@ -1,3 +1,10 @@
+<?php
+// quand le fichier est lu on veux que le fichier db soit lu aussi
+require_once('db.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -173,9 +180,13 @@
         echo "<br>tu es basique donc tu es nul.";
     }
 
-     ?>
 
-     <form action="" method="post">
+    ?>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------------
+
+
+     <form action="validation.php" method="post">
         <h2>Register</h2>
         <label for="text">First name: </label>
         <br>
@@ -202,10 +213,10 @@
     <input type="radio" name="button" id="male" value="male">
     <label for="button1">Male</label>
 
-    <input type="radio" name="button" id="female" value="male">
+    <input type="radio" name="button" id="female" value="female">
     <label for="button2">Female</label>
 
-    <input type="radio" name="button" id="other" value="male">
+    <input type="radio" name="button" id="other" value="other">
     <label for="button3">Other</label>
     <br>
     <input type="submit" value="submit">
@@ -214,18 +225,128 @@
 
     
      <?php
-        if (isset($_POST) && !empty($_POST)) {  
-            echo '<pre>'; var_dump($_POST); echo '</pre>';
-            echo $_POST['firstname'];
-            // sha1 Hash le mot c'est à dire le complexifie et le rend ilisible
-            // sha1 / md5
-            echo sha1($_POST['password']) . "<br>";
-            echo md5($_POST['password']);
-        }
+        
+
+        // $select = $bdd->prepare('SELECT firstname, lastname') // sélectionne la cellule "firstname et "lastname"
+        // $select = $bdd->prepare('SELECT * FROM utilisateur;') // sélectionne toutes les données de utilisateur
+
+        // Je prépare ma commande
+        $select = $bdd->prepare('SELECT * FROM utilisateur WHERE gender=?'); // sélectionne toutes données de utilisateur ou genre = ?
+        
+
+        // Je l'execute en lui donnant une valeur à la place des ?
+        $select->execute(array("female"));
+
+        // Je récupère tout ce que me renvoie ma commande
+        $total = $select->fetchAll(PDO::FETCH_ASSOC);
+
+        // Je l'affiche
+        echo '<pre>';
+        var_dump($total);
+        echo '</pre>';
+
+        echo $total[8]['gender'];
+        
 
         // Si method post est rentré dans le formulaire il faut utiliser $_POST , sinon si la methode get est rentrée dans le formulaire il faut utiliser $_GET
         // La fonction isset sert à regarder si la variable qui lui est donnée est bien définie, dans ce cas ci elle regarde si la variable $_POST est définie
 
         ?>
+
+        <br><br><br>
+    
+
+        <form action="validation.php" method="post">
+            
+                <label for="name">Your name</label>
+                <br>
+                <input type="text" id="name" name="name">
+                <br><br>
+                <label for="mail">Your mail</label>
+                <br>
+                <input type="text" id="mail" name="mail">
+                <br><br>
+                <label for="message">Your message</label>
+                
+                <br><br>
+                <textarea name="message" placeholder="message" id="message" cols="30" rows="10"></textarea>
+                <br>
+                <label for="number">Give me a number !</label>
+                <br>
+                <input type="int" id="number" name="number">
+
+                <br><br>
+
+                <input type="submit" value="soumettre" name="soumettre">
+
+        </form>
+
+              
+         
+
+ 
+
+         
+
+/*
+
+        if (isset($_POST) && !empty($_POST)) {  
+            echo '<pre>'; var_dump($_POST); echo '</pre>'; 
+            echo $_POST['name'];
+
+            $insert = $bdd->prepare('INSERT INTO exo(name, mail, message, number) VALUES (?, ?, ?, ?, ?)');
+            $insert->execute(array($_POST['name'], $_POST['mail'], $_POST['message'], $_POST['number']))
+
+        ;
+}
+
+            ?>
+  
+               
+
+
+    
+----------------------------> 
+
+        
+        
+                
+        
+
+        <form action="exo_correction.php" method="post">
+
+            <label for="name">Your name</label>
+            <br>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="mail">Your mail</label>
+            <br>
+            <input type="email" name="mail" id="mail">
+            <br>
+            <label for="message">Your message</label>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <br>
+            <label for="number">Give me a number</label>
+             <br>
+             <input type="number" name="number" id="number">
+             <br>
+             <input type="submit" value="envoyer">
+
+
+            <br><br>
+        </form>
+
+       <?php
+        
+            if (isset($_POST) && !empty($_POST)) {
+                settype($_POST['number'], 'integer');
+                $newmessage = $bdd->prepare('INSERT INTO correction_exo(name, mail, message, number) VALUES (?, ?, ?, ?)');
+                $newmessage->execute(array($_POST['name'], $_POST['mail'], $_POST['message'], $_POST['number']));
+
+            };
+        
+        ?>
+
 </body>
 </html>
