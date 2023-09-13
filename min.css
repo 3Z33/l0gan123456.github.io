@@ -1,0 +1,27 @@
+
+
+
+html {
+    background-color: rgb(190, 190, 190);
+}
+
+
+fieldset {
+    
+    border: 25px solid;
+    
+    border-color: rgb(255, 8, 0);
+}
+
+
+input {
+    width: 35px;
+    height: 20px;
+}
+
+
+#minuteur {
+    font-size: 6em;
+    letter-spacing: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
