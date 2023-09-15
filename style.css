@@ -13,7 +13,7 @@ http://localhost/cours_php/l0gan123456.github.io/index.html
 
 tr, td, th, table {
     border:1px solid black; 
-/* border-collapse: collapse; collapse sert à "coller" les bordures des cellules entre elles */
+/* border-collapse: collapse;      collapse sert à "coller" les bordures des cellules entre elles */
     border-spacing: 0px;
     border-radius: 15px
 }
