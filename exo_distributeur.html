@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Distributeur</title>
+
+    <style>
+
+        #champ {
+            width: 100px;
+            height: 40px;
+            line-height: 25px;
+            position: absolute;
+            left: 80px;
+            border-radius: 18%;
+        }
+
+        .corp {
+            border: solid black;
+            background-color:lightgray;
+            width: 400px;
+            height: 400px;
+        }
+
+
+        #panel {
+            position:absolute;
+            left: 75px;
+            top: 100px;
+        }
+
+        .bt {
+            width: 70px;
+            height: 40px;
+            border-radius: 18%;
+            background-color: lightgray;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Ajoutez un gestionnaire de clic aux boutons avec la classe "bt"
+    const boutons = document.querySelectorAll(".bt");
+    const champTexte = document.getElementById("champ");
+
+    boutons.forEach(bouton => {
+        bouton.addEventListener("click", function() {
+            
+            const caractere = "*"; 
+            champTexte.value += caractere;
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Ajoutez un gestionnaire de clic au bouton avec l'ID "eff"
+    const boutonEffacer = document.getElementById("eff");
+    const boutonDecliner = document.getElementById("dec");
+    const boutonEntrer = document.getElementById("entr");
+
+    const champTexte = document.getElementById("champ");
+
+    boutonEffacer.addEventListener("click", function() {
+        // Effacez le contenu du champ texte
+        champTexte.value = "";
+    });
+
+    boutonDecliner.addEventListener("click", function() {
+        // Effacez le contenu du champ texte
+        champTexte.value = "";
+    });
+
+    boutonEntrer.addEventListener("click", function() {
+        // Effacez le contenu du champ texte
+        champTexte.value = "";
+    });
+});
+
+    
+
+
+
+
+    </script>
+
+
+
+    <div class="corp">
+
+        <div id="panel">
+
+        <tr>
+            <input type="text" id="champ" readonly>
+
+        </tr>
+
+        <br><br><br><br>
+
+        <tr>
+            
+            <th><input type="button" name="1" value="1" class="bt" id="mou"></th>
+            <th><input type="button" name="2" value="2" class="bt"></th>
+            <th><input type="button" name="3" value="3" class="bt"></th>
+            <th><input type="button" name="cancel" value="Decliner" class="bt" id="dec"></th>
+        </tr>
+
+        <br><br>
+
+        <tr class="bouton">
+            <th><input type="button" name="4" value="4" class="bt"></th>
+            <th><input type="button" name="5" value="5" class="bt"></th>
+            <th><input type="button" name="6" value="6" class="bt"></th>
+            <th><input type="button" name="erase" value="Effacer" class="bt" id="eff"></th>
+        </tr>
+
+        <br><br>
+
+        <tr class="bouton">
+            <th><input type="button" name="7" value="7" class="bt"></th>
+            <th><input type="button" name="8" value="8" class="bt"></th>
+            <th><input type="button" name="9" value="9" class="bt"></th>
+            <th><input type="button" name="sign" value="Entrer" class="bt" id="entr"></th>
+        </tr>
+
+        <br><br>
+
+        <tr class="bouton">
+            <th><input type="button" name="-" value="-" class="bt"></th>
+            <th><input type="button" name="0" value="0" class="bt"></th>
+            <th><input type="button" name="+" value="+" class="bt"></th>
+            
+        </tr>
+    </div>
+    </div>
+    
+</body>
+</html>

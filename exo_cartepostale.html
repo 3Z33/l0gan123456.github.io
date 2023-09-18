@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Carte postale</title>
-    <link rel="stylesheet" href="./fonts/Ephesis-Regular.ttf">
+    
+    
+    
+    
 
 
     <style>
+
+        @font-face {
+        font-family: Ephesis;
+        src: url(‘/fonts/Ephesis-Regular.ttf’)
+            
+        }
+
 
         .base {
             background-color: bisque;
@@ -32,16 +42,17 @@
         .base3 {
             background-color: aquamarine;   
             position: absolute;
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 300px;
             bottom: 0;
             right: 0;
-            margin-right: 65px;
+            margin-right: 85px;
             margin-bottom: 60px;
             word-wrap: break-word;
             font-size: 40px;
             text-decoration: underline;
-            font-family: ;
+            font-family:Ephesis;
+            line-height: 80px;
             
             
         }
@@ -52,16 +63,54 @@
             position: absolute;
             bottom: 15px;
             left: 300px;
-            
-            
-            
-            
 
         }
 
+        #timbre {
+            position:absolute;
+            right:30px;
+            top:20px;
+            height:30%;
+            width:220px;
+        }
 
+        #bord {
+            border:3px solid black;
+            position: absolute;
+            width: 160px;
+            height:195px;
+            right:56px;
+            top:17px
+        }
+
+        #obliteration {
+            position: absolute;
+            right:105px;
+            top:105px;
+            width:16%;
+            height:28%;
+        }
         
+        #tampon {
+            position: absolute;
+            width:13%;
+            height:26%;
+            right:290px;
+            top:10px;
+            transform: rotate(35deg);
 
+        }
+
+        #date {
+            position: absolute;
+            right: 285px;
+            top: 35px;
+            font-size: 38px;
+            font-weight: bold;
+            transform: rotate(35deg);
+            
+            
+        }
 
 
 
@@ -87,20 +136,24 @@
     <div class="base">
         <tr id="bloc">
             <address id="address">&copy | La Carte Parisienne Tel : 03.82.47.10.53</address>
+            <img src="https://cdn.discordapp.com/attachments/1152221525051707524/1152221539396231261/timbre.png" id="timbre">
+            <img src="https://cdn.discordapp.com/attachments/1152221525051707524/1152221538892906567/obliteration.png" id="obliteration">
+            <img src="https://cdn.discordapp.com/attachments/1152221525051707524/1152221539098447922/tampon.png" id="tampon">
+            <div id="bord"></div>
+            <p id="date">18/09/2023</p>
         </tr>
  
 
-    <div class="base2"></div>
+    <!--<div class="base2"></div> -->
     <tr>
         <td></td>
     </tr>
 
     <div class="base3">
 
-        <tr>ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <tr>Edouard Philipe<br> Pied de la tour Eiffel 72007 Paris<br> France</tr>
+        
+        
 
 
     </div>
