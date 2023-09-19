@@ -133,7 +133,7 @@ for(var i = 0 ; i < Chmilblik.length; i++) {
 
 do {
 
-} while (false); // Elle s'écécute une première fois, puis elle vérifie si la condition est vrai ou fausse pour s'exécuter de nouveau
+} while (false); // Elle s'éxécute une première fois, puis elle vérifie si la condition est vrai ou fausse pour s'exécuter de nouveau
 
 
 
