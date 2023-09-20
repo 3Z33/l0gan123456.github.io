@@ -199,6 +199,98 @@ var x, y;
 All JavaScript identifiers are case sensitive. 
 The variables lastName and lastname, are two different variables
 
+================================
+
+In this first example, x, y, and z are undeclared variables
+They are automatically declared when first used   :
+
+x = 5;
+y = 6;
+z = x + y;
+
+
+The var keyword was used in all JavaScript code from 1995 to 2015.
+The let and const keywords were added to JavaScript in 2015.
+The var keyword should only be used in code written for older browsers.
+
+================================
+
+All JavaScript variables must be identified with unique names.
+These unique names are called identifiers.
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+The general rules for constructing names for variables (unique identifiers) are :
+
+    Names can contain letters, digits, underscores, and dollar signs.
+    Names must begin with a letter.
+    Names can also begin with $ and _ (but we will not use it in this tutorial).
+    Names are case sensitive (y and Y are different variables).
+    Reserved words (like JavaScript keywords) cannot be used as names.
+
+JavaScript identifiers are case-sensitive.
+
+================================
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+PHP
+
+En PHP, le symbole $ est utilisé pour déclarer, accéder et manipuler des variables. 
+
+Portée des variables : En PHP, la portée d'une variable dépend de l'endroit où elle est déclarée. 
+Les variables peuvent avoir une portée locale (définies à l'intérieur d'une fonction ou d'un bloc de code) 
+ou une portée globale (définies en dehors de toutes les fonctions). Vous utilisez également le symbole $ pour accéder à 
+des variables globales à l'intérieur de fonctions.
+
+$select  :  c'est une variable qui va stocker la requête SQL préparée. Vous pouvez choisir n'importe quel nom de 
+            variable que vous préférez. Cette variable sera utilisée pour exécuter la requête préparée plus tard.
+
+$bdd  :  Il s'agit généralement d'une variable qui représente la connexion à la base de données. Dans ce contexte, 
+         $bdd est probablement un objet qui a été créé en utilisant une extension PHP comme MySQLi ou PDO pour établir la connexion à la base de données.
+
+prepare('SELECT code FROM distrib WHERE code=?)  :  Cette partie de la ligne de code est la préparation de la requête SQL. 
+                                                    Elle indique à la base de données que vous allez exécuter une requête SELECT qui sélectionne 
+                                                    des données depuis la table "distrib" et récupère la colonne "code". Le ? dans la requête est un paramètre 
+                                                    préparé, ce qui signifie qu'il sera remplacé par une valeur spécifique lorsque la 
+                                                    requête sera exécutée. Cela est souvent utilisé pour éviter les attaques par injection SQL en sécurisant 
+                                                    les requêtes.
+
+->execute(array($_POST['number']))  :  C'est l'appel à la méthode execute() de l'objet $select. Cette méthode est utilisée pour exécuter la requête SQL préparée.
+
+array($_POST['number']) :  C'est un tableau qui contient les valeurs des paramètres que vous souhaitez utiliser dans la requête préparée. 
+                           Dans ce cas, il semble que vous récupériez la valeur d'un champ de formulaire 
+                           nommé "number" via $_POST et que vous l'ayez placée dans un tableau pour être utilisée comme valeur de paramètre.
+
+                           Lorsque vous appelez ->execute(), les valeurs que vous avez fournies dans le tableau sont utilisées pour remplacer 
+                           les paramètres préparés (dans ce cas, le ? dans votre requête SQL préparée). Cela exécute effectivement la requête SQL 
+                           avec les valeurs fournies et peut récupérer des résultats de la base de données, le cas échéant, en fonction de la requête.
+
+
+-----
+
+$select = $select->fetchAll();
+
+$select   : Il s'agit probablement de la variable dans laquelle vous avez stocké la requête SQL préparée à l'étape précédente. Dans la plupart 
+des cas, cette variable est utilisée pour exécuter la requête préparée et récupérer les résultats.
+
+->fetchAll()   : C'est une méthode utilisée pour exécuter la requête préparée associée à la variable $select et récupérer toutes 
+                 les lignes de résultats de la requête sous forme de tableau.
+
+                 Lorsque vous appelez ->fetchAll(), la requête SQL préparée est exécutée, et toutes les lignes de résultats sont 
+                 extraites de la base de données et stockées dans un tableau. Chaque ligne de résultat est représentée comme un 
+                 tableau associatif, où les clés sont les noms des colonnes de la table et les valeurs sont les données correspondantes.
+
+  
+foreach()   : utilisé pour parcourir le tableau
+
+
+
+
+
+
 
 
 
