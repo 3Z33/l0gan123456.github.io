@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once('db.php');
 ?>
 <!DOCTYPE html>
@@ -9,9 +9,12 @@ require_once('db.php');
     <link rel="stylesheet" href="correction_distributeur.css">
 </head>
 <body>
+    <a href="index.php">Page D'accueil</a>
+    <a href="inscription.php">Inscription</a>
     <section>
         <form action="" method="post">
-            <span class="num" id="texte">
+            <span class="num" id="texte">            
+                <input type="text" name="username" id="username">
                 <input type="password" name="number" id=invisible readonly>
                 <input type="text" id='affiche' readonly>
             </span>
@@ -37,9 +40,10 @@ require_once('db.php');
 
         if (isset($_POST) && !empty($_POST)) {
             // echo '<pre>'; var_dump($_POST); echo '</pre>'; 
-            $select = $bdd->prepare('SELECT code FROM distrib WHERE code=?');
+            $select = $bdd->prepare('SELECT code FROM atm WHERE code=? and username=?');
             $select->execute(array(
-                $_POST['number']
+                sha1($_POST['number']),
+                $_POST['username']
             ));
             $select = $select->fetchAll();
             if (count($select) > 0) 
@@ -75,6 +79,11 @@ require_once('db.php');
         document.getElementById('erase').addEventListener('click', Stop)
 
     </script>
+
+    <!-- 
+        Faite un formulaire qui va permettre d'inscrire de nouveau code 
+        dans la base de donnée vous devez mettre le nom et prénom et aussi utilisateur
+        Si le nom de la personne est déja existant il n'y pas possible d'être intégrer                
+     -->
 </body>
 </html>
-    
