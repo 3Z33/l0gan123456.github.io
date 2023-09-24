@@ -1,6 +1,7 @@
 <?php
-require_once('db.php')
+require_once('../../l0gan123456.github.io/db.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
