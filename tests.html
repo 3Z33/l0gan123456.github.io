@@ -44,6 +44,16 @@ console.log(para)
 
 <!-- 
 
+
+
+  ==================================================
+  ==================================================
+  JAVASCRIPT
+  ==================================================
+  ==================================================
+
+
+
 comment utiliser JavaScript :
 
 dans un fichier HTML écrire le JS entre les balises <script>  </script>
@@ -469,8 +479,418 @@ var carName;
 Using a let variable before it is declared will result in a ReferenceError :
 
 
+------------
+
+=====================
+const
+=====================
 
 
+Variables defined with const cannot be Redeclared
+Variables defined with const cannot be Reassigned
+Variables defined with const have Block Scope
+
+const PI = 3.141592653589793;
+PI = 3.14;      // This will give an error
+PI = PI + 10;   // This will also give an error
+
+JavaScript const variables must be assigned a value when they are declared :
+
+const PI = 3.14159265359; /* correct */
+
+---
+
+const PI;
+PI = 3.14159265359;  /* incorrect */
+
+Always declare a variable with const when you know that the value should not be changed.
+
+---------
+
+========================
+Constant arrays
+========================
+
+You can change the elements of a constant array :
+
+// You can create a constant array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// You can change an element:
+cars[0] = "Toyota";
+
+// You can add an element:
+cars.push("Audi");
+
+---
+
+But you can NOT reassign the array :
+
+ const cars = ["Saab", "Volvo", "BMW"];
+
+cars = ["Toyota", "Volvo", "Audi"];    // ERROR 
+
+-----------
+
+You can change the properties of a constant object :
+
+// You can create a const object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// You can change a property:
+car.color = "red";
+
+// You can add a property:
+car.owner = "Johnson"; 
+
+-------
+
+But you can NOT reassign the object :
+
+ const car = {type:"Fiat", model:"500", color:"white"};
+
+car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR 
+
+===========
+Block scope
+===========
+
+Declaring a variable with const is similar to let when it comes to Block Scope.
+The x declared in the block, in this example, is not the same as the x declared outside the block :
+
+ const x = 10;
+// Here x is 10
+
+{
+const x = 2;
+// Here x is 2
+}
+
+// Here x is 10 
+
+----
+
+Redeclaring a JavaScript var variable is allowed anywhere in a program :
+
+var x = 2;     // Allowed
+var x = 3;     // Allowed
+x = 4;         // Allowed
+
+----
+
+Redeclaring an existing var or let variable to const, in the same scope, is not allowed :
+
+var x = 2;     // Allowed
+const x = 2;   // Not allowed
+
+{
+let x = 2;     // Allowed
+const x = 2;   // Not allowed
+}
+
+{
+const x = 2;   // Allowed
+const x = 2;   // Not allowed
+}
+
+
+----
+
+Variables defined with var are hoisted to the top and can be initialized at any time.
+Meaning: You can use the variable before it is declared :
+
+carName = "Volvo";
+var carName;
+
+
+----
+
+Using a const variable before it is declared will result in a ReferenceError :
+
+alert (carName);
+const carName = "Volvo";
+
+
+----
+
+
+===========
+OPERATORS
+===========
+
++ 	Addition
+- 	Subtraction
+* 	Multiplication
+** 	Exponentiation (ES2016)
+/ 	Division
+% 	Modulus (Division Remainder)
+++ 	Increment
+-- 	Decrement
+
+
+============
+ASSIGNMENT OPERATORS
+============
+
+
+Operator         Example 	    Same As
+=               	x = y 	     x = y
++= 	              x += y       x = x + y
+-= 	              x -= y 	     x = x - y
+*= 	              x *= y       x = x * y
+/= 	              x /= y 	     x = x / y
+%= 	              x %= y 	     x = x % y
+**= 	            x **= y 	   x = x ** y
+
+=============
+COMPARAISON OPERATORS
+=============
+
+Operator      	Description
+== 	            equal to
+=== 	          equal value and equal type
+!= 	            not equal
+!== 	          not equal value or not equal type
+> 	            greater than
+< 	            less than
+>= 	            greater than or equal to
+<= 	            less than or equal to
+? 	            ternary operator
+
+
+
+
+All the comparison operators above can also be used on strings :
+
+let text1 = "A";
+let text2 = "B";
+let result = text1 < text2;
+
+-------
+
+
+The + can also be used to add (concatenate) strings :
+
+let text1 = "John";
+let text2 = "Doe";
+let text3 = text1 + " " + text2;
+
+---------
+
+The += assignment operator can also be used to add (concatenate) strings :
+
+let text1 = "What a very ";
+text1 += "nice day";
+
+The result of text1 will be : What a very nice day
+
+--------
+
+
+============
+ADDING STRINGS AND NUMBERS
+=============
+
+Adding two numbers, will return the sum, but adding a number and a string will return a string :
+
+let x = 5 + 5;
+let y = "5" + 5;
+let z = "Hello" + 5;
+
+The result of x, y, and z will be :  10
+                                     55
+                                     Hello5 
+
+
+If you add a number and a string, the result will be a string!
+
+
+------------
+
+Operator       	Description
+
+typeof 	        Returns the type of a variable
+instanceof 	    Returns true if an object is an instance of an object type
+
+------------------
+
+The &= Operator
+
+The Bitwise AND Assignment Operator does a bitwise AND operation on two operands and assigns the result to the the variable :
+
+let x = 10;
+x &= 5;
+
+------------
+
+The |= Operator
+
+The Bitwise OR Assignment Operator does a bitwise OR operation on two operands and assigns the result to the variable :
+
+let x = 10;
+x |= 5;
+
+-----------
+
+The ^= Operator
+
+The Bitwise XOR Assignment Operator does a bitwise XOR operation on two operands and assigns the result to the variable :
+
+let x = 10;
+x ^= 5;
+
+
+-----------
+
+The &&= Operator
+
+The Logical AND assignment operator is used between two values.
+If the first value is true, the second value is assigned.
+
+let x = 10;
+x &&= 5;
+
+---------------
+
+The ||= Operator
+
+The Logical OR assignment operator is used between two values.
+If the first value is false, the second value is assigned.
+
+let x = 10;
+x ||= 5;
+
+-------------
+
+The ??= Operator
+
+The Nullish coalescing assignment operator is used between two values.
+If the first value is undefined or null, the second value is assigned.
+
+let x;
+x ??= 5;
+
+====================================
+DATA TYPES
+====================================
+
+JavaScript has 8 Datatypes :
+
+String
+Number
+Bigint
+Boolean
+Undefined
+Null
+Symbol
+Object
+
+-------------------
+
+The Object Datatype
+
+The object data type can contain :
+
+An object
+An array
+A date 
+
+-------------------
+
+A JavaScript variable can hold any type of data.
+
+When adding a number and a string, JavaScript will treat the number as a string :
+
+let x = 16 + "Volvo";
+
+JavaScript will treat the example above as :
+
+let x = "16" + "Volvo";
+
+---------------------------
+
+JavaScript evaluates expressions from left to right. Different sequences can produce different results :
+
+let x = 16 + 4 + "Volvo";
+
+Result:
+
+20Volvo 
+
+-----------------------
+
+let x = "Volvo" + 16 + 4;
+
+Result:
+
+Volvo164 
+
+
+In the first example, JavaScript treats 16 and 4 as numbers, until it reaches "Volvo".
+In the second example, since the first operand is a string, all operands are treated as strings.
+
+-----------------------
+
+JavaScript has dynamic types. This means that the same variable can be used to hold different data types :
+
+let x;       // Now x is undefined
+x = 5;       // Now x is a Number
+x = "John";  // Now x is a String
+
+
+------------------------
+
+
+You can use quotes inside a string, as long as they don't match the quotes surrounding the string :
+
+// Single quote inside double quotes :
+let answer1 = "It's alright";
+
+// Single quotes inside double quotes :
+let answer2 = "He is called 'Johnny'";
+
+// Double quotes inside single quotes :
+let answer3 = 'He is called "Johnny"';
+
+
+-------------------------
+
+Extra large or extra small numbers can be written with scientific (exponential) notation :
+
+ let y = 123e5;    // 12300000
+let z = 123e-5;   // 0.00123 
+
+
+
+-----------------------
+
+JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be represented by a normal JavaScript Number.
+
+let x = BigInt("123456789012345678901234567890");
+
+----------------------
+
+Booleans can only have two values: true or false.
+
+let x = 5;
+let y = 5;
+let z = 6;
+(x == y)       // Returns true
+(x == z)       // Returns false
+
+----------------------
+
+=============
+ARRAYS
+=============
+
+JavaScript arrays are written with square brackets.
+Array items are separated by commas.
+The following code declares (creates) an array called cars, containing three items (car names) :
+
+const cars = ["Saab", "Volvo", "BMW"];
+
+Array indexes are zero-based, which means the first item is [0], second is [1], and so on.
 
 
 

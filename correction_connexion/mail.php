@@ -1,0 +1,43 @@
+<?php
+require "./PHPMailer/PHPMailerAutoload.php";
+
+function GenerateToken($length) { // 10
+    $token = "_0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
+    echo substr(str_shuffle(str_repeat($token, $length)), 0, $length);
+}
+
+function SendEmail($id, $token, $email) {
+    function smtpmailer($to, $from, $from_name, $subject, $body) {
+        $mail = new PHPMailer();
+
+        $mail->isSMTP();
+        $mail->SMTPAuth = 'tls';
+
+        $mail->SMTPSecure = 'ssl';
+        $mail->Host = 'smtp-mail.outlook.com';
+        $mail->Port = 587;
+
+        $mail->Username = $from;
+        $mail->Password = "DWWMauboue";
+
+        $mail->isHTML();
+        $mail->From = $from;
+        $mail->FromName = $from_name;
+        $mail->Sender = $from;
+        $mail->addReplyTo($from, $from_name);
+        $mail->Subject = $subject;
+        $mail->Body = $body;
+        $mail->addAddress($to);
+        
+        if (!$mail->Send()) {
+            return "Le mail ne s'est pas envoyé ressayer plus tard";
+            
+        } else {
+            return "Le mail s'est envoyé avec succés";
+        }
+    }
+    $msg = "Lien pour réinitialiser votre mot de passe : http://localhost/cours_php/l0gan123456.github.io/correction_connexion/reset.php?id=$id&token=$token";
+    smtpmailer($email, 'dwwm.auboue@hotmail.com', 'DWWM', "Réinitialiser votre mot de passe", $msg);
+}
+        
+    

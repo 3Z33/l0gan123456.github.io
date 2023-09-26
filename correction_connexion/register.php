@@ -40,18 +40,19 @@ require_once('../db.php')
     </form>
     <?php
     if (isset($_POST) && !empty($_POST)) { /* !empty($_POST) = count($_POST) !== 0 */
-        $select = $bdd->prepare("SELECT * FROM user WHERE username=?");
-        $select->execute(array($_POST['username']));
+        $select = $bdd->prepare("SELECT * FROM user WHERE username=? OR email=?");
+        $select->execute(array($_POST['username'], $_POST['email']));
         $select = $select->fetchAll();
         if (empty($select)) {
             $insert = $bdd->prepare('INSERT INTO user(prenom, nom, username, email, genre, password) VALUE (?, ?, ?, ?, ?, ?);');
             $insert->execute(array(
                 $_POST['firstname'],
                 $_POST['lastname'],
-                $_POST['username'],                
+                $_POST['username'],
+                $_POST['email'],                
                 $_POST['genre'],
                 sha1($_POST['password']),
-                $_POST['email']
+                
             ));
             header("Location: login.php");
         } else 
