@@ -1,3 +1,5 @@
+
+<!--fichier exo -->
 <?php
 require "./PHPMailer/PHPMailerAutoload.php";
 /**
@@ -7,14 +9,14 @@ require "./PHPMailer/PHPMailerAutoload.php";
  */
 
 
-function GenerateToken($length) { // 10
-    $token = "_0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
-    return substr(str_shuffle(str_repeat($token, $length)), 0, $length);
+function TokenConfirm($length) { // 10
+    $tokenc = "_0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
+    return substr(str_shuffle(str_repeat($tokenc, $length)), 0, $length);
 }
 
 
 
-function SendEmail($id, $token, $email, $msg, $objet, $name) {
+function SendEmail($id, $tokenc, $email) {
     function smtpmailer($to, $from, $from_name, $subject, $body) {
         $mail = new PHPMailer();        
 
@@ -45,8 +47,6 @@ function SendEmail($id, $token, $email, $msg, $objet, $name) {
         }
 
     }
-    // $msg = "Lien pour réinitialiser votre mot de passe : http://localhost/cours_php/l0gan123456.github.io/correction_connexion/reset.php?id=$id&token=$token";  
-    smtpmailer($email, 'dwwm.auboue@hotmail.com', 'DWM', "ff", $name, $objet, $msg);                               
+    $msg = "Votre compte a bien été créé";  
+    smtpmailer($email, 'dwwm.auboue@hotmail.com', 'confirmation', "compté créé", $msg);                               
 }
-        
-    

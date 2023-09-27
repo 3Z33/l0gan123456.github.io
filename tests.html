@@ -892,6 +892,51 @@ const cars = ["Saab", "Volvo", "BMW"];
 
 Array indexes are zero-based, which means the first item is [0], second is [1], and so on.
 
+----------------
+
+Operator 	       Description
+ && 	           logical and
+ || 	           logical or
+ ! 	             logical not
+
+
+ --------------
+
+typeof 	Returns the type of a variable
+instanceof 	Returns true if an object is an instance of an object type
+
+
+--------------
+
+The exponentiation operator (**) raises the first operand to the power of the second operand.
+
+let x = 5;
+let z = x ** 2;
+
+x ** y produces the same result as Math.pow(x,y) :
+
+
+let x = 5;
+let z = Math.pow(x,2);
+
+-------------
+
+Operator 	   Example 	    Same As
+&=        	x &= y      	x = x & y
+^=        	x ^= y 	      x = x ^ y
+|= 	        x |= y 	      x = x | y
+
+---------------
+
+Operator 	Example 	Same As
+&&= 	    x &&= y 	x = x && (x = y)
+||= 	    x ||= y 	x = x || (x = y)
+??= 	    x ??= y 	x = x ?? (x = y)
+
+
+------------
+
+let text = "Hello"; text += " World";
 
 
 -->
