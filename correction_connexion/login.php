@@ -3,7 +3,10 @@ require_once('../db.php');
 session_start();
 if (!empty($_SESSION)) header('Location: index.php');
 if (!empty($_GET)) {
-    if ($_GET['success'] == 'reset') echo '<script> alert("Votre mot de passe à été modifié") </script>';
+    if (isset($_GET['success'])) {
+        if ($_GET['success'] == 'reset') echo '<script> alert("Votre mot de passe à été modifié") </script>';
+        if ($_GET['success'] == 'mail') echo '<script> alert("Votre adresse mail à été confirmé") </script>';
+    }
 }
 
 ?>
@@ -32,7 +35,7 @@ if (!empty($_GET)) {
     </form>
     <?php 
     if (isset($_POST) && !empty($_POST)) {
-        $select = $bdd->prepare('SELECT * FROM user WHERE (username=:login OR email=:login) AND password=:pass');
+        $select = $bdd->prepare('SELECT * FROM users WHERE (username=:login OR email=:login) AND password=:pass');
         $select->execute(array(
             'login' => $_POST['username'],
             'pass' => sha1($_POST['password'])
@@ -50,3 +53,5 @@ if (!empty($_GET)) {
     ?>
 </body>
 </html>
+
+<!-- quand on appuie sur confirmer, cela retire le token et met la valeur 1 dans la colonne confirm -->

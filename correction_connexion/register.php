@@ -1,5 +1,6 @@
 <?php
-require_once('../db.php')
+require_once('../db.php');
+require_once('mail.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,23 +41,30 @@ require_once('../db.php')
     </form>
     <?php
     if (isset($_POST) && !empty($_POST)) { /* !empty($_POST) = count($_POST) !== 0 */
-        $select = $bdd->prepare("SELECT * FROM user WHERE username=? OR email=?");
+        $select = $bdd->prepare("SELECT * FROM users WHERE username=? OR email=?");
         $select->execute(array($_POST['username'], $_POST['email']));
         $select = $select->fetchAll();
         if (empty($select)) {
-            $insert = $bdd->prepare('INSERT INTO user(prenom, nom, username, email, genre, password) VALUE (?, ?, ?, ?, ?, ?);');
+            $token = GenerateToken(50);
+
+            $insert = $bdd->prepare('INSERT INTO users(prenom, nom, email, username, genre, password, token) VALUE (?, ?, ?, ?, ?, ?, ?);');
             $insert->execute(array(
                 $_POST['firstname'],
                 $_POST['lastname'],
-                $_POST['username'],
-                $_POST['email'],                
+                $_POST['email'],
+                $_POST['username'],                
                 $_POST['genre'],
                 sha1($_POST['password']),
+                $token
                 
             ));
-            header("Location: login.php");
+            
+            $msg = "Lien pour vérifier votre adresse mail : http://localhost/l0gan123456.github.io/correction_connexion/verify.php?token=$token"; 
+            SendEmail($_POST['email'], $msg, "Validation Adresse Mail", 'DWWM');
+
+            header("Location: login.php?username=" . $_POST['username']);
         } else 
-            echo '<script> alert("Ce pseudo est déja utilisé donc vous devez en utiliser un autre qui ne soit pas le même mais qui ne comporte pas de caractère spécial parce que ca ne peux pas fonctionner et donc si vous ne faite pas ca ne pourra toujours pas fonctioner parce que vous êtes vraiment nul !") </script>';
+            echo '<script> alert("Ce pseudo ou l\'addresse email sont déja utilisé donc vous devez en utiliser un autre qui ne soit pas le même mais qui ne comporte pas de caractère spécial parce que ca ne peux pas fonctionner et donc si vous ne faite pas ca ne pourra toujours pas fonctioner parce que vous êtes vraiment nul !") </script>';
 
 
     }
@@ -72,23 +80,7 @@ require_once('../db.php')
             else                 
                 confirmPassword.setCustomValidity('Les mots de passe doivent être identique')      
         }
-        function SingleUsername() {
-        //     let Username = document.getElementById('username')
-        //     document.cookie = "username = " + Username.value
-
-            <?php 
-        //         $select = $bdd->prepare("SELECT * FROM users WHERE username=?");
-        //         $select->execute(array(
-        //             $_COOKIE['username']
-        //         ));
-        //         $select = $select->fetchAll();
-        //         setcookie('select', empty($select), time() + (86400 * 30), "/");
-        //     ?>                
-        //     // if (bool) {
-        //     //     Username.setCustomValidity('Ce nom d\'utilisateur est déjà utilisé')
-        //     // }
-
-        }
+        
     </script>
 
 
