@@ -10,12 +10,17 @@
 
 <nav>
 
-    <ul>
-        <li>JAMBON</li>
-        <li>PIZZA</li>
-        <li>TOMATE</li>
-        <li>PATATE</li>
+    <ul class="liste">
+        <li><b><a href="https://fr.wikipedia.org/wiki/Jambon">JAMBON</a></b></li>
+        <li><b><a href="https://fr.wikipedia.org/wiki/Pizza">PIZZA</a></b></li>
+        <li><b><a href="https://fr.wikipedia.org/wiki/Tomate">TOMATE</a></b></li>
+        <li><b><a href="https://fr.wikipedia.org/wiki/Patate">PATATE</a></b></li>
+        <li><b>|</b></li>
+        
+        
+        <li><box-icon name='search' class="icon" color='#ffffff'></box-icon></li>
     </ul>
+    
 </nav>
     
 </body>
