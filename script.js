@@ -62,6 +62,8 @@ setInterval(comptage, 2000)
 
 //git push -u origin main
 
+// git pull origin main -> pour récupérer les nouvelles modifications sur git hub
+
 
 // commande pour tout faire en une fois : git add . && git commit -m "Maj" && git push -u origin main ("Maj" ou un nom au choix)
 
