@@ -1,0 +1,66 @@
+.champ {
+    
+    height:500px;
+    background-image: linear-gradient(to right, rgb(246, 76, 255), rgb(95, 0, 95));
+}
+
+.bar {
+    width:1500px;
+    height:100px;
+    background-color: rgba(226, 226, 226, 0.8);
+    margin: 20px;
+    position: absolute;
+    left: 100px;
+    border-radius: 80px;
+    text-align: center;
+    box-shadow: 0 0 1px 1px grey
+    
+}
+
+
+.element {
+    list-style-type: none;
+    display: inline;
+    margin-right: 80px;
+    top: 27px;
+    line-height: 90px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.btn {
+    width: 150px;
+    line-height: 45px;
+    height: 45px;   
+    border-radius: 80px;
+    list-style-type: none;
+    position: absolute;
+    right: 35px;
+    top: 27px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-image: linear-gradient(to right, rgb(246, 76, 255), rgb(95, 0, 95));
+    box-shadow: 0 0 6px 1px black;
+    font-weight: bold;
+    color: white;
+
+}
+
+.title {
+    top: 36px;
+    left: 35px;
+    list-style-type: none;
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+#chevron-down {
+    font-size: 40px;
+
+}
+
+
+
+
+
