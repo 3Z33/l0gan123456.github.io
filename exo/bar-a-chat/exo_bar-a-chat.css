@@ -1,0 +1,14 @@
+body {
+    background-color: burlywood;
+}
+
+.gerant {
+    
+    border:1px solid rgb(0, 0, 0);
+    width: 200px;
+    height:70px;
+    color: aqua;
+    right:30px;
+    position: absolute;
+}
+
