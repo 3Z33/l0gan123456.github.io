@@ -19,17 +19,18 @@
     <tr>
         <td>bar 1</td>
     </tr>
+        <td>nos chats :</td>
     <tr>
-        <td>Ligne 2</td>
+        <td>chatbal</td>
     </tr>
     <tr>
-        <td>Ligne 3</td>
+        <td>chatroulle</td>
     </tr>
     <tr>
-        <td>Ligne 4</td>
+        <td>chatpeau</td>
     </tr>
     <tr>
-        <td>Ligne 5</td>
+        <td>chatue</td>
     </tr>
         </table>
 
@@ -39,17 +40,18 @@
     <tr>
         <td>bar2</td>
     </tr>
+        <td>nos chats :</td>
     <tr>
-        <td>Ligne 2</td>
+        <td>chatgrin</td>
     </tr>
     <tr>
-        <td>Ligne 3</td>
+        <td>chare</td>
     </tr>
     <tr>
-        <td>Ligne 4</td>
+        <td>chateau</td>
     </tr>
     <tr>
-        <td>Ligne 5</td>
+        <td>clochat</td>
     </tr>
         </table>
 
@@ -59,17 +61,18 @@
     <tr>
         <td>bar3</td>
     </tr>
+        <td>nos chats :</td>
     <tr>
-        <td>Ligne 2</td>
+        <td>chatmeau</td>
     </tr>
     <tr>
-        <td>Ligne 3</td>
+        <td>chatbrille</td>
     </tr>
     <tr>
-        <td>Ligne 4</td>
+        <td>chatpelle</td>
     </tr>
     <tr>
-        <td>Ligne 5</td>
+        <td>chatiment</td>
     </tr>
         </table>
 
