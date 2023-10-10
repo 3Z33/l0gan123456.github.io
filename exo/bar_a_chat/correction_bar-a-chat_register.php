@@ -33,7 +33,7 @@ require_once('dbCat.php');
                 password_hash($_POST['password'], PASSWORD_ARGON2ID)
             ));
 
-            header('Location: correction_bar-a-chat_login.php');
+            header('Location: correction_bar_a_chat_login.php');
         }
     
     ?>

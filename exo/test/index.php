@@ -5,10 +5,10 @@ session_start();
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link rel="stylesheet" href="correction_bar-a-chat.css">
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
     <title>Accueil</title>
-    </head>
+</head>
 <body>
     <?php include 'inc/header.php'; ?>
     <br><br><br><br>
