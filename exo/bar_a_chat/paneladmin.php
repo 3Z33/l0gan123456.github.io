@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
 require_once('dbCat.php'); 
 
@@ -24,7 +25,7 @@ if (!empty($_SESSION)) {
 </head>
 <body>
     <?php 
-        $_GET['page'] = "panneladmin";
+        $_GET['page'] = "paneladmin";
         include 'inc/header.php' 
     ?>
 

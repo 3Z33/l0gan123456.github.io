@@ -9,7 +9,9 @@ require_once('dbCat.php');
     <title>Inscription</title>
 </head>
 <body>
-    <?php include 'inc/header.php'; ?>
+    <?php 
+    $_GET['page'] = 'register';
+    include 'inc/header.php'; ?>
     <br><br><br><br>
 
     <form method="post">
@@ -33,7 +35,7 @@ require_once('dbCat.php');
                 password_hash($_POST['password'], PASSWORD_ARGON2ID)
             ));
 
-            header('Location: correction_bar_a_chat_login.php');
+            
         }
     
     ?>
