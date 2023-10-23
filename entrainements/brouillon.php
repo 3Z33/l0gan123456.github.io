@@ -5,33 +5,56 @@
     <title>page brouillon</title>
 
     <style>
+
         body {
+            display:flex;
+            justify-content:space-between;
+            background-color:grey;
             
-            background-color: grey;
         }
 
-        div {
-            width:500px;
-            background-color: orange;
-        }
-
-        p {
-            width: 300px;
-            background-color: green;
-            margin-left:800px;
-        }
-
-        body, div, p {
+        .a {
+            width:100px;
+            height:100px;
+            background-color:red;
             
+        }
+        .b {
+            width:100px;
+            height:100px; 
+            background-color:blue;
+        }
+        .c {
+            width:100px;
+            height:100px;
+            background-color:orange;
+        }
+        .d {
+            width:100px;
+            height:100px;
+            background-color:green;
         }
     </style>
     
 </head>
 <body>
 
-<div>
-    <p> fjkdjf jfke jkfjlk jfklzjklejklzjfkzf kzlfjlkezfj zssfk jzklef</p>
+<div class="a">
+    
 </div>
+
+<div class="b">
+
+</div>
+
+<div class="c">
+
+</div>
+
+<div class="d">
+
+</div>
+
 
     
 </body>

@@ -949,5 +949,49 @@ function myFunction(p1, p2) {
   return p1 * p2;
 }
 
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+
+
+The code inside the function will execute when "something" invokes (calls) the function:
+
+When an event occurs (when a user clicks a button)
+When it is invoked (called) from JavaScript code
+Automatically (self invoked)
+
+
+Accessing a function without () returns the function and not the function result:
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+
+let value = toCelsius;
+
+As you see from the examples above, toCelsius refers to the function object, and toCelsius() refers to the function result.
+
+-----------------
+
+Instead of using a variable to store the return value of a function:
+
+let x = toCelsius(77);
+let text = "The temperature is " + x + " Celsius";
+
+----
+
+You can use the function directly, as a variable value:
+
+let text = "The temperature is " + toCelsius(77) + " Celsius";
+
+----
+
+Variables declared within a JavaScript function, become LOCAL to the function.
+
+Local variables can only be accessed from within the function.
+
 
 -->

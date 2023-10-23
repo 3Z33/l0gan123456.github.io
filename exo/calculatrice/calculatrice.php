@@ -34,6 +34,10 @@
         </fieldset>
     </form>
 
+    <script>
+        
+    </script>
+
 
     <script>/*
     var button = document.getElementsByClassName('nb')
