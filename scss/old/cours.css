@@ -4,14 +4,14 @@ body {
 
 h1, h2, h3 {
   color: chartreuse;
-  margin: 0 200px;
+  margin: 0 40px;
 }
 
 ul {
   margin: 10px;
 }
 ul a {
-  color: rgb(215, 115, 141);
+  color: rgb(214, 156, 30);
 }
 ul a:hover {
   color: chartreuse;
