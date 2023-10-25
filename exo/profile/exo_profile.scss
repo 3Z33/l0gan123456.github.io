@@ -36,13 +36,25 @@ h1, h3 {
     display: inline;
 }
 
+.tri
+{
+    width:100px;
+    height:100px;
+    
+    border-left: 60px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 100px solid #007bff;
+    transform:rotate(25deg);
+    transform: skew(-20deg, 0deg);
 
-.parag {
-    display: inline;
 }
+
+
 .p1 {
     width:240px;
     height:700px;
     background-color: beige;
+    
+    padding:100px;
 }
 
