@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+
+
+
+
+.first-div h1{
+    
+    
+    justify-content: center;
+    display: flex;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+
+}
+
+.first-div p{
+    
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+
+#flag{
+    width: 50px;
+    margin-left: 20px;
+    
+}
+
+
+
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: center;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    padding:10px 50px 10px 50px;
+
+}
+
+ul li{
+    width: 120px;
+    margin: auto 0 auto 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 1000;
+    
+}
+
+ul :nth-child(10){
+    color: red;
+}
+
+
+.carousel-container{
+    
+    height: 70vh;
+    width: 90vw;
+    margin: auto;
+    background-repeat: round;   
+    position: relative; 
+    margin-top: 50px;
+    
+    
+}
+
+
+.slide1-content{
+    
+    position: absolute;
+    top: 350px;
+    right: 100px;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.bt-shop{
+    color: white;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(222, 189, 5);
+    text-transform: capitalize;
+    font-size: 20px;
+    border: none;
+}
+
+.strong-word{
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+.searchbar{
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    
+
+}
+
+
+.carousel-slide{
+    width: 90%;
+    height: 80vh;
+    background-repeat: no-repeat;
+}
+
+
+.carousel-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ----------------- */
+
+#slide1{
+    background-image: url("https://images.healthshots.com/healthshots/en/uploads/2023/08/25160403/jaggery-tea.jpg");
+}
+
+#slide2{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7D7pZSI2U-q_EN5LhR1N-QVBXFr4ii-4MacIQhFm_jw&s");
+}
+
+#slide3{
+    background-image: url("");
+}
+
+#slide4{
+    background-image: url("");
+}
+
+#slide5{
+    background-image: url("");
+}
+
+
+
+
+
+
+
+
