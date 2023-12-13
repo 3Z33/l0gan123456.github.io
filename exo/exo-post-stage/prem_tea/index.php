@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="correction-pagescss.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link rel="stylesheet" href="swiper-bundle.min.css">
-    <script src="swiper-bundle2.min.js"></script>
+    <link rel="stylesheet" href="./assets/style/swiper.css">
+    <script src="./assets/script/swiper.js"></script>
     <title>PREMIUM TEAS</title>
 </head>
 <body>
@@ -38,34 +38,20 @@
         </nav>
     </header>
 
-    <div class="carrousel">
+    <div class="swiper carrousel">
+        <div class="swiper-wrapper">
         <!-- div.slide${Slide $}*5 -->
-        <div class="slide1">Slide 1</div>
-        <div class="slide2">Slide 2</div>
-        <div class="slide3">Slide 3</div>
-        <div class="slide4">Slide 4</div>
-        <div class="slide5">Slide 5</div>
+            <div class="swiper-slide slide1">Slide 1</div>
+            <div class="swiper-slide slide2">Slide 2</div>
+            <div class="swiper-slide slide3">Slide 3</div>
+            <div class="swiper-slide slide4">Slide 4</div>
+            <div class="swiper-slide slide5">Slide 5</div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
-    <div class="display"></div>
-        <div class="previous"></div>
-        <div class="next"></div>
-    </div>
-    <script>
-        const carrousel = new Swiper('.carrousel', {
-            loop: true,
-            autoplay: {
-                delay: 4500,
-                disableOnInteraction: true
-            },
-            pagination: {
-                el: '.swiper-pagination'
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            }
-        })
-    </script>
 
+    <script src="./assets/script/carousel.js"></script>
 </body>
 </html>
